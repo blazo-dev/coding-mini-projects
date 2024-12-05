@@ -1,0 +1,31 @@
+<main class="page-layout grid-wrapper">
+  <section class="page-layout__hero">
+    <app-hero />
+  </section>
+  <section class="page-layout__content">
+    <div class="page-layout__text-content">
+      <h2 class="page-layout__title">
+        <img
+          src="assets/images/vector.svg"
+          alt="Minimalistic brown spiral line design"
+          class="page-layout__spiral-image"
+        />
+        Our Collection
+      </h2>
+      <p class="page-layout__paragraph">
+        Introducing our Coffee Collection, a selection of unique coffees from
+        different roast types and origins, expertly roasted in small batches and
+        shipped fresh weekly.
+      </p>
+    </div>
+    <div class="page-layout__buttons">
+      <app-button [isActive]="!showAvailable" (click)="showAllProducts()">
+        All Products
+      </app-button>
+      <app-button [isActive]="showAvailable" (click)="showAvailableProducts()">
+        Available Now
+      </app-button>
+    </div>
+    <app-card-list [products]="shownProducts" />
+  </section>
+</main>

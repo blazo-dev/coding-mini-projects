@@ -1,0 +1,40 @@
+<article class="card">
+  @if (product().popular) {
+  <span class="card__popular">Popular</span>
+  }
+  <img
+    [src]="product().image"
+    [alt]="'Image of ' + product().name"
+    class="card__image"
+  />
+  <div class="card__content">
+    <h3 class="card__title">{{ product().name }}</h3>
+    <p class="card__price">{{ product().price }}</p>
+  </div>
+  <footer class="card__footer">
+    @if (product().rating) {
+    <aside class="card__footer__aside">
+      <img
+        src="assets/images/Star_fill.svg"
+        alt="Star fill icon"
+        class="card__rating-icon"
+      />
+      <p class="card__rating">
+        {{ product().rating }}
+        <span class="card__votes">({{ product().votes }} Votes)</span>
+      </p>
+    </aside>
+    } @else {
+    <aside class="card__footer__aside">
+      <img
+        src="assets/images/Star.svg"
+        alt="Star empty icon"
+        class="card__rating-icon"
+      />
+      <p class="card__no-rating">No ratings</p>
+    </aside>
+    } @if (!product().available) {
+    <p class="card__sold-out">Sold out</p>
+    }
+  </footer>
+</article>
