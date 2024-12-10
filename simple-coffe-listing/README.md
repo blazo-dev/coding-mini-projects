@@ -6,7 +6,7 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 To start a local development server, run:
 
-```bash
+```
 ng serve
 ```
 
@@ -16,13 +16,13 @@ Once the server is running, open your browser and navigate to `http://localhost:
 
 Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-```bash
+```
 ng generate component component-name
 ```
 
 For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-```bash
+```
 ng generate --help
 ```
 
@@ -30,7 +30,7 @@ ng generate --help
 
 To build the project run:
 
-```bash
+```
 ng build
 ```
 
@@ -40,7 +40,7 @@ This will compile your project and store the build artifacts in the `dist/` dire
 
 To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
 
-```bash
+```
 ng test
 ```
 
@@ -48,12 +48,18 @@ ng test
 
 For end-to-end (e2e) testing, run:
 
-```bash
+```
 ng e2e
 ```
 
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
+## Deployed version
+
+You can see the deployed version of the project here: [Simple Coffee Listing App](https://blazo-simple-coffe-listing.vercel.app/).
+
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+---
