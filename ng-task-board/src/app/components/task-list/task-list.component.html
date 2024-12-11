@@ -1,0 +1,6 @@
+<ul class="task-list">
+  @for (task of tasks(); track task.id) {
+  <app-task [task]="task" />
+  }
+  <app-add-task-button />
+</ul>

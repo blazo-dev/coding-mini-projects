@@ -1,0 +1,64 @@
+.board-header {
+  display: grid;
+  grid-template-columns: 40px 1.5fr 1fr;
+  gap: 0.5rem;
+
+  &__content {
+    position: relative;
+
+    max-width: 300px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__title,
+  &__description {
+    width: 100%;
+    padding: 0;
+
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+
+    background-color: transparent;
+
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid var(--color-overlay);
+    }
+  }
+
+  &__title {
+    font-size: var(--font-title-size);
+    font-weight: var(--font-weight-regular);
+  }
+
+  &__description {
+    font-weight: var(--font-weight-normal);
+  }
+
+  &__title,
+  &__description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    margin-block: 0;
+  }
+
+  &__title[hidden],
+  &__description[hidden] {
+    display: none;
+  }
+
+  &__edit-icon {
+    position: absolute;
+    left: 100%;
+    top: 0;
+  }
+}

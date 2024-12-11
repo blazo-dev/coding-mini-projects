@@ -1,0 +1,50 @@
+<header class="board-header">
+  <img
+    src="assets/images/logo.svg"
+    alt="Task Board Logo"
+    class="board-header__logo"
+  />
+  <div class="board-header__content">
+    <h1
+      [hidden]="isEditingTitle"
+      class="board-header__title"
+      (click)="activeEditTitle()"
+      [title]="title()"
+    >
+      {{ title() }}
+    </h1>
+    <input
+      #titleInput
+      [hidden]="!isEditingTitle"
+      class="board-header__title"
+      [ngClass]="{ 'board-header__title--editable': isEditingTitle }"
+      [(ngModel)]="title"
+      (blur)="deactiveEditTitle()"
+      (keydown.enter)="deactiveEditTitle()"
+    />
+    <p
+      [hidden]="isEditingDescription"
+      class="board-header__description"
+      (click)="activeEditDescription()"
+      [title]="description()"
+    >
+      {{ description() }}
+    </p>
+    <input
+      #descriptionInput
+      [hidden]="!isEditingDescription"
+      class="board-header__description"
+      [ngClass]="{
+        'board-header__description--editable': isEditingDescription
+      }"
+      [(ngModel)]="description"
+      (blur)="deactiveEditDescription()"
+      (keydown.enter)="deactiveEditTitle()"
+    />
+    <img
+      src="assets/images/edit_duotone.svg"
+      alt="Edit Board"
+      class="board-header__edit-icon"
+    />
+  </div>
+</header>

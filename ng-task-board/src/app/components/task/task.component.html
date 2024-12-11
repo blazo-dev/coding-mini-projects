@@ -1,0 +1,24 @@
+<li [id]="task().id" class="task task--{{ task().status }}">
+  <div class="task__content">
+    <span class="task__icon">
+      {{ task().icon }}
+    </span>
+    <div class="task__details">
+      <p class="task__title">
+        {{ task().name }}
+      </p>
+      @if (task().description) {
+      <p class="task__description">
+        {{ task().description }}
+      </p>
+      }
+    </div>
+  </div>
+  @if (task().status !== taskStates['TODO']) {
+  <img
+    src="assets/images/{{ taskImages[task().status] }}"
+    alt="Done round"
+    class="task__status-icon task__status-icon--{{ task().status }}"
+  />
+  }
+</li>

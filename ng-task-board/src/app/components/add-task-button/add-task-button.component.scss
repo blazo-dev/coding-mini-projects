@@ -1,0 +1,36 @@
+.button {
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+
+  width: 100%;
+  padding: 0.8rem;
+
+  background-color: var(--color-add-task-light);
+  border: none;
+  border-radius: var(--border-radius);
+
+  cursor: pointer;
+
+  &__img {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 40px;
+    width: 40px;
+    padding: 0.5rem;
+
+    border-radius: var(--border-radius);
+
+    background-color: var(--color-progress);
+  }
+
+  &__title {
+    margin-block: 0;
+
+    font-size: var(--font-task-title-size);
+    font-weight: var(--font-weight-semibold);
+  }
+}
