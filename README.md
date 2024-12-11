@@ -1,7 +1,3 @@
-Aquí tienes el README actualizado con el nombre y el enlace del repositorio:
-
----
-
 # Coding Mini Projects
 
 **Small programming projects and challenges to improve my skills in various languages and technologies.**  
